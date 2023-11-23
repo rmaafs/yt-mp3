@@ -1,0 +1,18 @@
+version: "3"
+services:
+  app:
+    #image: rmaafs/yt-mp3:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8814:8814"
+    environment:
+      VIRTUAL_HOST: youtube.rmaafs.com
+    env_file: ./.env
+    restart: always
+
+networks:
+  default:
+    name: nginx-proxy
+    external: true

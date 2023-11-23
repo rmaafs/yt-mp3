@@ -1,0 +1,35 @@
+{
+  "name": "yt-mp3",
+  "version": "1.0.0",
+  "description": "API para descargar música de YouTube.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon --exec node_modules/.bin/babel-node index.js",
+    "sintax:test": "prettier --check \"{,!(node_modules)/**/}*.js\"",
+    "sintax:fix": "prettier --check --write \"{,!(node_modules)/**/}*.js\"",
+    "lint": "eslint . --ext .js",
+    "check": "npm run sintax:test && npm run lint && jest"
+  },
+  "author": "Rodrigo Maafs Atilano",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/eslint-parser": "^7.14.7",
+    "@babel/node": "^7.14.7",
+    "@babel/preset-env": "^7.14.8",
+    "eslint": "^7.32.0",
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "promise": "^8.3.0",
+    "youtube-mp3-downloader": "^0.7.11",
+    "ytdl-core": "^4.11.5"
+  }
+}
